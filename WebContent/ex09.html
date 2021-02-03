@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>함수</h1>
+	
+		<!-- 	
+		public int plus(int a, int b){
+		int sum = a+b;
+		return sum;
+	    }
+	
+    	int plusSum = plus(5,8);
+    	-->
+    	
+    	
+    <!-- 기명 함수, 선언적 함수: 이름이 있는 함수- 정의부분부터 해석된다. -->
+	<script type="text/javascript">
+		//함수 정의 1
+		function plus(a, b){
+			var sum = a+b
+			return sum;
+		}
+		//사용법 2
+		var plusSum = plus(3,5);
+		console.log(plusSum);
+	</script>
+	
+	<script type="text/javascript">
+		//순서가 달라도 여러번에 읽어서 실행하기 때문에 함수를 일단 인식하고 다음에 대입한다.
+		//사용법 2
+		var plusSum = plus(3,5);
+		console.log(plusSum);
+		
+		//함수 정의 1
+		function plus(a, b){
+			var sum = a+b
+			return sum;
+		}
+	
+	<!-- 익명 함수: 이름없어서 바로 사용해야 한다. 2번 사용이 거의 안된다. -->
+	<!--         1번 이상 사용하려면 변수에 넣어두고 사용한다. -->
+	
+	//함수정의 : 함수를 변수 minus에 넣는다. 변수를 실행해야 해서 ()를 붙여준다.
+	var minus = function(a,b){
+		return a-b;
+	}
+	
+	var result03 = minus(5,2); //minus에 실행해야 해서 ()가 추가됨.
+	console.log(result03);
+	
+	var result04 = minus(5,5); 
+	console.log(result04);
+	
+	var aaa = "안녕";
+	변수 number string boolean null
+	
+	</script>
+</body>
+</html>

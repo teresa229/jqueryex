@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body>
+	<h1>자바스크립트 변수</h1>
+</body>
+	<script type="text/javascript">
+		/*변수 선언법: 자료형을 쓰지 않는다*/
+		console.log("변수 선언");
+		var no = 3;            //number no = 3;
+		var str = "안녕하세요";   //string str;
+		var result = 3>5;      //boolean
+		
+		console.log(no);
+		console.log(str);
+		console.log(result);
+		
+		num = 1234;
+		console.log(num);
+	</script>
+	
+	<script type="text/javascript">
+		/*변수 이름이 같을 때*/
+		var person = "정우성";
+		person = "이효리";
+		console.log(person);
+		console.log("-------");
+		
+		var person1 = "정우성";
+		var person1 = "이효리";
+		var person1 = "이정재"; //마지막에 변수를 읽어버린다. 같은 변수를 계속해서 선언할 수 있다. person2에서 오타가 1로 나면 문제가 생길 수 있다. 유연함의 단점.
+		console.log(person01);
+		console.log("==================================");		
+	</script>
+	
+	<script type="text/javascript">
+		/*대입시 자료형이 결정된다*/
+		//자료형 number string boolean -->변수 선언시 표시하지 않는다.
+		var data; //임의로 정한 변수 data
+		console.log(typeof data); //undefined 자료형이 정의되지 않음.
+		
+		data = 15;
+		console.log(typeof data); // 값이 들어갈 떄 자료형number가 결정된다.
+		
+		data = "안녕";
+		console.log(typeof data); // 값이 들어갈 떄 자료형string가 결정된다.
+		
+		data = true;
+		console.log(typeof data); // 값이 들어갈 떄 자료형boolean가 결정된다.
+	</script>
+	
+	<script type="text/javascript">
+		/*null*/
+		var myVar01;
+		var myVar02=null;
+		
+		console.log(myVar01); //undefined
+		console.log(myVar02); //null
+		
+		console.log("==================================");	
+	</script>
+
+	<script type="text/javascript">
+		/* ==:동등연산자, === : 일치연산자 비교*/
+		console.log("123"== 123);  //자료형은 비교하지 않고,값을 비교한다. --true
+		console.log("123"=== 123);  //문자열과 숫자열을 다르게 표현할 수 있어야 한다.자료형을 엄격하게 구분해서 사용해야 한다 --false
+		
+		console.log(myVar01 == myVar02); //true 눈에 보이는 정도만 비교한다.
+		console.log(myVar01 === myVar02);//false 엄격하게 구분한다.
+		
+		console.log("-------");
+		console.log('' == false); //true
+		console.log('' === false);//false
+		
+		console.log('' == 0);     //true
+		console.log('' === 0);    //false
+		
+		console.log('' == false); //true
+		console.log('' == 0);     //true
+		console.log(0 == false);  //true
+	</script>
+</html>
