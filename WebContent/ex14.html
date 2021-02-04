@@ -17,7 +17,7 @@
 	<h3 class="tagh3">네이버</h3>	
 	
 	<div>
-		<button id="btn">자바스크립트 데스트</button>
+		<button id="btn">자바스크립트 데스트</button>    <!-- 정한 이름:btn -->
 	</div>
 	
 	<p id="display">
@@ -55,9 +55,9 @@
 			 //[<h3 class="tagh3">h2태그1</h3>, <h3 class="tagh3">h2태그2</h3>]
 			 var tagh3Array = document.getElementsByClassName("tagh3");              //Elements
 		   	//step 1-2
-			 var textAea2 = document.getElementsById("display2"); //id라 배열이 아니다.
+			 var textArea2 = document.getElementById("display2"); //id라 배열이 아니다.
 			 console.log(tagh3Array);
-			 
+			 console.log(textArea2);
 			 
 			 
 			 
@@ -100,7 +100,7 @@
 		     //h3태그 : 네이버 클릭했을 때
 		     tagh3Array[2].onclick = function(){
 		    	 console.log("네이버");
-		    	 textArea2.innerHTML="<a href='http://www.naver.com'>네이버</a>"
+		    	 textArea2.innerHTML="<a href='http://www.naver.com' target='_blank'>네이버</a>"
 		     };
 		};
 	</script>
