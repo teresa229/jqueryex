@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>변수의 범위</h1>
+	<script type="text/javascript">
+	
+		/*
+		var name ="global";
+		
+		//함수 정의, 바로 실행되지 않는다, 1차: 정의부분이 정리만 된다.
+		function checkscope(){  //checkscope() 내가 직접 만든 이름
+			var name = "local";
+			console.log(name);
+		}
+		
+		checkscope();       //어떤 name이 출력될까?  local
+		console.log(name);  //loacal은 {}끝나서 사라지고 global이 나온다.
+		*/
+		
+		var name ="global"; //var이 있으면 새로 생긴다//전역변수 1
+		var name2 = "로컬";
+		
+		function checkscope(){
+			name = "local"; //var이 없으니 같은 이름 name을 찾아 넣는다. 
+			name2 = "로컬";                     //전역변수 2 : var가 없으면 {}가 끝나도 계속 살아있다..윗쪽 '전역변수1'같이 선언된다. 좋은 코드는 아니다. 정의된 후 계속 쓰고 싶다 할 때 사용한다.
+		}
+		
+		checkscope();
+		console.log(name); //local
+		console.log(name2);//로컬
+		
+	</script>
+</body>
+</html>

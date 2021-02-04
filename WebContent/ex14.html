@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>이벤트</h1>
+	<!-- step 1: ~할 때, step 2: 이벤트 잡는다 -->
+	
+	<h2>h2태그1</h2>
+	<h2>h2태그2</h2>
+	<h2>h2태그3</h2>
+	
+	<h3 class="tagh3">h3태그1</h3>
+	<h3 class="tagh3">h3태그2</h3>
+	<h3 class="tagh3">네이버</h3>	
+	
+	<div>
+		<button id="btn">자바스크립트 데스트</button>
+	</div>
+	
+	<p id="display">
+		<!-- 클릭하고 나서 홍길동이 나오게 설정해준다. 자바스크립트가 제어할 수 있도록 이름을 준다. display -->
+	</p>
+	
+	<p id="display2">
+	
+	</p>
+	
+	<!-- var test = function(){} -->
+	
+	<script type="text/javascript">
+	
+		//문서가 로딩 되었을 때
+		window.onload = function(){   //그림(로딩이 되면)을 그리고 나면, function을 작동하라. //익명함수 function(){}; 기능 정의는 아직 하지 않았다.
+			   
+			 //  id 1  //
+			 //step 1-1
+			 var testButton = document.getElementById("btn");  //여기서는 버튼이 아니라 '버튼'으로 적어도 되지만....자세히 적어주기.
+		     console.log(testButton);
+			 
+		     //  id 2  //
+		  	 //step 1-2
+			 var textArea = document.getElementById("display"); //지은 이름 ' textArea ' //Element
+			 console.log(textArea); //개발되고 나면 지울 부분. 확인을 위한 것.
+			 
+			 // 태그    h2 //
+			 //[]<h2>h2태그1</h2>, <h2>h2태그2</h2>, <h2>h2태그3</h2>]
+			 var tagArray = document.getElementsByTagName("h2");  //tag는 여러개가 올 수 있다. 배열처럼 넘긴다.
+			 console.log(tagArray);
+			 
+			 //class h3 //
+			 //step 1-1
+			 //[<h3 class="tagh3">h2태그1</h3>, <h3 class="tagh3">h2태그2</h3>]
+			 var tagh3Array = document.getElementsByClassName("tagh3");              //Elements
+		   	//step 1-2
+			 var textAea2 = document.getElementsById("display2"); //id라 배열이 아니다.
+			 console.log(tagh3Array);
+			 
+			 
+			 
+			 
+			 //step 2 : 기능은 정의되고 클릭이 되면 작동된다.
+		     testButton.onclick = function(){                                   //.onclick : 클릭을 작동했을 때 연동시켜주었다. 클릭했을 때만 작동한다.
+		    	 console.log("버튼 클릭");
+		    	 textArea.innerHTML="<font color='#ff0000'>홍길동</font>";       //.innerHTML 정해진 문법, ""가 있어서 안은 ''
+		     };
+		
+		     //h2태그_1 : 클릭했을 때
+		     tagArray[0].onclick = function(){
+		    	 console.log("h2태그_1");
+		    	 textArea.innerHTML="<font color='#00ff00'>h2태그_1</font>"
+		     };
+		     
+		     //h2태그_2 : 클릭했을 때
+		     tagArray[1].onclick = function(){
+		    	 console.log("h2태그_2");
+		    	 textArea.innerHTML="<font color='#0000ff'>h2태그_2</font>"
+		     };
+		     
+		     //h2태그_3 : 클릭했을 때
+		     tagArray[2].onclick = function(){
+		    	 console.log("h2태그_3");
+		    	 textArea.innerHTML="<font color='#0000ff'>h2태그_3</font>"
+		     };
+		     
+		     
+		     //h3태그 : 클릭했을 때
+		     tagh3Array[0].onclick = function(){
+		    	 console.log("h3태그_1");
+		    	 textArea2.innerHTML="<font color='#ff00ff'>h3태그_1</font>"
+		     };	     
+		     
+		     tagh3Array[1].onclick = function(){
+		    	 console.log("h3태그_2");
+		    	 textArea2.innerHTML="<font color='#00ffff'>h3태그_2</font>"
+		     };
+		     
+		     //h3태그 : 네이버 클릭했을 때
+		     tagh3Array[2].onclick = function(){
+		    	 console.log("네이버");
+		    	 textArea2.innerHTML="<a href='http://www.naver.com'>네이버</a>"
+		     };
+		};
+	</script>
+	<!-- 마우스를 클릭할 때~~~실행되라 -->
+	<!-- 키보드를 입력할 때 ~~~ 실행되라 -->
+	<!-- 마우스를 드레그 할 때 -->
+	
+</body>
+</html>
