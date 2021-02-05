@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div>
+		<button id="btn">자바스크립트 테스트</button>
+	</div>
+	
+	<p id="display">
+	
+	</p>
+
+</body>
+
+	<script type="text/javascript">
+	
+/* 		window.onload = function(){
+			
+			var testButton = document.getElementById("btn");
+			var textArea = document.getElementById("display");
+			
+			console.log(testButton);
+			console.log(textArea);
+
+			testButton.onclick = function(){
+				console.log();
+				textArea.innerHTML="<font color='#ff0000'>홍길동</font>";
+			};
+		}; 
+		*/
+	
+		$("#btn").on("click",function(){       //id는 #  //(이벤트, 기능)
+			
+		$("#display").html("<font color='#ff0000'>홍길동</font>");
+			
+		}); 
+	
+	</script>
+
+
+
+</html>

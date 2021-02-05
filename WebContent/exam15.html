@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<ul>
+		<li id="first" class="red">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+		
+	</ul>
+	<button id="btn" type="button" VALUE="li요소추가" /></button>
+</body>
+
+<script type="text/javascript">
+	$("#btn").on("click",function(){
+		console.log("버튼클릭");
+		//$("ul").html("<li>다섯번째입니다.</li>");	//태그가 있어서...  .html 은 안을 싹 다 바꿔버린다.
+		
+		//버튼 클릭 -> li 요소 추가
+		$("ul").append("<li>다섯번째입니다.</li>");
+		$("ul").append("<li>여섯번째입니다.</li>");
+		$("ul").append("<li>일곱번째입니다.</li>");
+	});
+	
+	//불안정한 상태
+	$("li").on("click",function(){   //추가된 것은 인식을 못한다. 두가지를 구분해야 한다. 기존 li, 추가된 li
+		console.log("li클릭");        //기존 list는 모두 인식을 한다. 모든 정보를 갖고 있는데.. 추가된 3개는 끼어들었다. 이벤트 대응 준비가 안되어 있다. 보이기만 할뿐이다.
+		var str = $(this).text();
+		console.log($(this));
+	});
+	
+	//완성된 모습 1-1
+	$("ul").on("click", function(){ //이벤트 입장에서는 li를 구분하지 못한다. 1~7 아이템 모두 읽어낸다.
+		console.log("ul 클릭");
+		console.log($(this));
+	});
+	
+	//완성된 모습 1-2 : 위임, 임산부 예시
+	$("ul").on("click", "li", function(){ //이벤트 입장에서는 li를 구분하지 못한다. 1~7 아이템 모두 읽어낸다.
+		//console.log("ul 클릭");
+		//console.log($(this));
+		
+		//var str = $(this).text();
+		//console.log(str);
+		
+		$(this).text("김경아");
+		
+	});
+	
+	
+</script>
+
+</html>

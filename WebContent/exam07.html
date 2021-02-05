@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+
+<body>
+	<p id="p1"> abcdefghijklmn </p>
+	<p id="p2"> 학교종이 땡땡땡<br /> abcdefg </p>
+</body>
+	
+<script type="text/javascript">
+
+	/* 
+	//</strong>를 문자로 읽어버림.
+	$("#p1").text("<strong>가나다라마바사</strong>"); //text만 있었으면 문제 없었는데...html이 있어서 문제가 생긴다.
+	*/
+
+	$("#p1").html("<strong>가나다라마바사</strong>"); //html이 섞여 있으면 사용     //setter- 불러오는 것
+	
+	var strHtml = $("#p2").html();                                      //getter- 읽어오는 것
+	console.log(strHtml);
+	
+	var str = $("#p2").text();                                          //getter- 읽어오는 것
+	console.log(str);
+	
+</script>
+</html>

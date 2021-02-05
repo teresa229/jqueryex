@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+
+<body>
+	<ul>
+		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
+		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
+		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
+		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
+		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
+		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
+		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="first"> 텍스트1 텍스트1 텍스트1 텍스트1 텍스트1 </li>
+		<li class="second"> 텍스트2 텍스트2 텍스트2 텍스트2 텍스트2 </li>
+		<li > 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+	</ul>
+</body>
+	
+    <!-- 	
+       태그 밑에 부가적으로 넣는 것들이 속성이다.
+	<a class="first" ></a>
+	<input type=text, name=password, value=""></input>
+	-->
+	
+	<script type="text/javascript">
+	
+	/* var tags = $("[class]");  //속성을 불러오는 방식: type, name, value --속성들
+	console.log(tags); */
+	
+	$("[class]").css("color","red");
+	$("[class='first']").css("color","green");
+	</script>
+
+
+</html>

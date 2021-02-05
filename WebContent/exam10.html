@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+
+<body>
+
+	<ul>
+		<li class="del">첫번째 아이템입니다.</li>
+		<li class="del"><strong>두번째 아이템입니다.</strong></li>
+		<li class="del">세번째<br> 아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+		<li>다섯번째 아이템입니다.</li>
+	</ul>
+
+</body>
+<script type="text/javascript">
+
+	//$(".del").text(""); //방법 1: 빈 것 처럼 보이게 만든다.
+
+	$(".del").empty();  //방법 2: 비운다. 내용만 빠진다.
+	
+</script>
+	
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<style>
+	.red {color: red;}
+	
+	.blue {color: blue;}
+
+</style>
+
+
+<title>Insert title here</title>
+</head>
+
+<body>
+
+	<ul>
+		<li id="first" class="red blue del">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+		<li>다섯번째 아이템입니다.</li>
+	</ul>
+
+</body>
+<script type="text/javascript">
+	//$("#first").css("color","blue");
+	
+	//$("#first").addClass("blue"); //기본 것에 추가가 된다. red의 기록이 남아있다.
+	
+	$("#first").removeClass("red"); //step 1)red를 없앤다.
+	$("#first").addClass("blue");   //step 2)빈 곳에 blue 추가한다.
+	
+	//$("#first").removeClass("blue"); //<li id="first" class="red blue del"> 추가하고 지울 경우
+	//$("#first").removeClass("blueblue"); //잘못 적어도 문제가 생긴다.
+</script>
+
+</html>

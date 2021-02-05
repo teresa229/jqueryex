@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<style>
+	.red {color: red;}
+	
+	.blue {color: blue;}
+
+</style>
+
+
+<title>Insert title here</title>
+</head>
+
+<body>
+
+	이름:<input type="text" name="name" value="" ><br>   <!-- value="" 없어도 작동한다 -->
+	비밀번호:<input type="password" name="password" ><br>
+	<textarea name="content"></textarea>
+	<br><br>
+	이름2:<input type="text" name="name2" value="홍길동"><br>
+	비밀번호2:<input type="password" name="password2" value="1234"><br>
+	<textarea name="content2">산토끼토끼야</textarea>
+	
+</body>
+<script type="text/javascript">
+
+	//방법 1: id적어주기 <input id="">
+	//방법 2: class 겹칠 수도 있다. 많이 사용하는 것이라..
+	//방법 3: 보통은 name이 안 겹친다. 수업 중에 name사용해 보기.
+	
+    //console 확인
+ 	//var tags = $(["name"]);  //name이 여러개 있으므로.. 한개의 name을 찾아서 설정해 준다.
+	//console.log(tags);
+	
+    //속성으로 찾기
+ 	var tags = $("[name='name']");
+    
+    $("[name='name']").val("황일영");
+    $("[name='password']").val("1234");
+    $("[name='content']").val("내용내용");
+	console.log(tags);
+	
+	var name2 = $("[name='name2']").val();
+	console.log(name2);
+	
+	var password2 = $("[name='password2']").val();
+	console.log(password2);
+	
+	var content2 = $("[name='content2']").val();
+	console.log(content2);
+	
+	//묶어서 사용하는 경우가 많다.
+	var guestbookVo= {
+			name: name2,
+			password: password2,
+			content: content2
+	}
+	
+	console.log(guestbookVo);
+	
+</script>
+
+</html>

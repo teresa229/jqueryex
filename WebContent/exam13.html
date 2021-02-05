@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<button id="btn" type="button" VALUE="js테스트버튼" /></button> //사이를 꾸밀 수 있기 때문에 더 선호한다. input보다
+		<h1 id="display">이름출력영역</h1>
+	</div>
+
+</body>
+<script type="text/javascript">
+
+/* 	var tmp = $("#btn");
+	console.log(tmp); */
+	
+	$("#btn").on("click",function(){
+		console.log("버튼클릭");
+		$("#display").text("홍길동");
+		$("#display").css("color","red");
+		$("#display").prepend("김경아");
+		$("#display").append("유재석");	
+	});
+	
+	//$("display").text("홍길동");
+
+</script>
+
+
+</html>

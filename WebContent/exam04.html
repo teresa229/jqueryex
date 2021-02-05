@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="/jqueryex/jquery/jquery-1.12.4.js"></script>
+
+<title>Insert title here</title>
+</head>
+
+<body>
+	<ul>
+		<li class="red"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="blue"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="red"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="blue"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+		<li class="green"> 텍스트 텍스트 텍스트 텍스트 텍스트 </li>
+	</ul>
+
+</body>
+	<script type="text/javascript">
+	
+		/* $("red"); //red tag를 찾는 것이다.
+		$(".red");   //class red를 찾아줘. */
+	
+		$(".red").css("color","red");
+		
+		$(".blue").css("color","blue");
+		
+		
+		$(".red").css("color","blue");
+		$(".blue").css("color","blue");
+
+		//같이 사용하는 경우
+		$(".red, .blue").css("color","blue");
+		$(".red, #first, p").css("color","blue");
+		
+	</script>
+
+
+</html>
